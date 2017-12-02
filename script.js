@@ -37,7 +37,7 @@ function checkGuess() {
  
   guessCount++;
   guessField.value = '';
-  guessField.focus();
+ // guessField.focus();
 }
 
 guessSubmit.addEventListener('click', checkGuess);
@@ -64,7 +64,7 @@ function resetGame() {
   guessField.disabled = false;
   guessSubmit.disabled = false;
   guessField.value = '';
-  guessField.focus();
+ // guessField.focus();
 
   lastResult.style.backgroundColor = 'white';
 
