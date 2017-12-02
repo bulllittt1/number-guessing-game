@@ -11,7 +11,7 @@
         font-family: sans-serif;
       }
       body {
-        width: 100%; /* For mobile phones: */
+        width: 50%; /* For mobile phones: */
         max-width: 800px;
         min-width: 480px;
         margin: 0 auto;
@@ -21,7 +21,10 @@
         padding: 3px;
       }
         
-      
+      /* #### iPhone 5 Portrait or Landscape #### */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+    body {width: 100%};
+}
       
     </style>
   </head>
