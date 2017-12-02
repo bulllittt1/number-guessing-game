@@ -5,17 +5,17 @@ var lastResult = document.querySelector('.lastResult');
 var lowOrHi = document.querySelector('.lowOrHi');
 
 //var guessSubmit = document.querySelector('.guessSubmit');
-//var guessField = document.querySelector('.guessField');
+var Button = document.querySelector('.button');
+Button.focus();
 
 var guessCount = 1;
 var resetButton;
 
-function submitfunction() {
-    var guessSubmit = prompt ("Введите число");
-}
+
     
 function checkGuess() {
-  var userGuess = Number(guessField.value);
+  var guess = prompt ("Введите число");
+  var userGuess = Number(guess);
   if (guessCount === 1) {
     guesses.textContent = 'Ваши предыдущие числа: ';
   }
@@ -40,18 +40,18 @@ function checkGuess() {
   }
  
   guessCount++;
-  guessField.value = '';
-  //guessField.focus();
+  Button.focus();
 }
 
-guessSubmit.addEventListener('click', checkGuess);
+
     
 function setGameOver() {
-  guessField.disabled = true;
-  guessSubmit.disabled = true;
+ Button.disabled = true;
+ 
   resetButton = document.createElement('button');
   resetButton.textContent = 'Начать игру заново';
   document.body.appendChild(resetButton);
+  resetButton.focus();
   resetButton.addEventListener('click', resetGame);
 }
     
@@ -65,10 +65,9 @@ function resetGame() {
 
   resetButton.parentNode.removeChild(resetButton);
 
-  guessField.disabled = false;
-  guessSubmit.disabled = false;
-  guessField.value = '';
- // guessField.focus();
+Button.disabled = false;
+
+ Button.focus();
 
   lastResult.style.backgroundColor = 'white';
 
