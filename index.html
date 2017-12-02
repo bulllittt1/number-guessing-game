@@ -11,7 +11,7 @@
         font-family: sans-serif;
       }
       body {
-        width: 50%; /* For mobile phones: */
+        width: 50%; /* For desktop : */
         max-width: 800px;
         min-width: 480px;
         margin: 0 auto;
@@ -25,6 +25,11 @@
 @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
     body {width: 100%};
 }
+        /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+  body {width: 100%};
+}
+
       
     </style>
   </head>
