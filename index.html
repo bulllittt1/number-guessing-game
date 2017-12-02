@@ -11,7 +11,7 @@
         font-family: sans-serif;
       }
       body {
-        width: 50%; /* For desktop : */
+        width: 100%; 
         max-width: 800px;
         min-width: 480px;
         margin: 0 auto;
@@ -21,16 +21,6 @@
         padding: 3px;
       }
         
-      /* #### iPhone 5 Portrait or Landscape #### */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-    body {width: 100%};
-}
-        /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-  body {width: 100%};
-}
-
-      
     </style>
   </head>
 
@@ -41,8 +31,11 @@
       </p>
 
 <div class="form">
-  <label for="guessField">Введите ваше число: </label><input type="text" id="guessField" class="guessField">
+ 
+ <!--    <label  for="guessField">Введите ваше число: </label><input type="text" id="guessField" class="guessField">
   <input type="submit" value="Отправить на рассмотрение" class="guessSubmit">
+-->
+   <button onclick="submitfunction()">Нажать, чтобы ввести число</button>
 </div>
 
 <div class="resultParas">

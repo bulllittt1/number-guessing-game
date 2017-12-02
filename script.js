@@ -4,11 +4,15 @@ var guesses = document.querySelector('.guesses');
 var lastResult = document.querySelector('.lastResult');
 var lowOrHi = document.querySelector('.lowOrHi');
 
-var guessSubmit = document.querySelector('.guessSubmit');
-var guessField = document.querySelector('.guessField');
+//var guessSubmit = document.querySelector('.guessSubmit');
+//var guessField = document.querySelector('.guessField');
 
 var guessCount = 1;
 var resetButton;
+
+function submitfunction() {
+    var guessSubmit = prompt ("Введите число");
+}
     
 function checkGuess() {
   var userGuess = Number(guessField.value);
@@ -37,7 +41,7 @@ function checkGuess() {
  
   guessCount++;
   guessField.value = '';
- // guessField.focus();
+  //guessField.focus();
 }
 
 guessSubmit.addEventListener('click', checkGuess);
