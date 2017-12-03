@@ -5,6 +5,7 @@ var lastResult = document.querySelector('.lastResult');
 var lowOrHi = document.querySelector('.lowOrHi');
 
 var Button = document.querySelector('.button');
+Button.addEventListener('click', checkGuess);
 Button.focus();
 
 var guessCount = 1;
@@ -15,6 +16,7 @@ var resetButton;
 function checkGuess() {
   var guess = prompt ("Введите число");
   var userGuess = Number(guess);
+  
   if (guessCount === 1) {
     guesses.textContent = 'Ваши предыдущие числа: ';
   }
@@ -28,20 +30,20 @@ function checkGuess() {
     lowOrHi.textContent = '';
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!Игра того, этого - закончилась!!!';
+    lastResult.textContent = '!!!Попытки исчерпаны. Игра закончена!!!';
     setGameOver();
   } else {
-    lastResult.textContent = 'Неверно!';
+    lastResult.textContent = 'Не угадали!';
     lastResult.style.backgroundColor = 'red';
     if (userGuess === 0) {
         lowOrHi.textContent = 'Ноль не входит в промежуток от 1 до 100...';
-    } else if(userGuess > 100) {
-      lowOrHi.textContent = 'Ваше число больше, чем 100... ' ;
+    } else if(userGuess > 99) {
+      lowOrHi.textContent = 'Ваше число не входит в промежуток от 1 до 100...' ;
       } else {
         if(userGuess < randomNumber) {
-      lowOrHi.textContent = 'Ваше число меньше, чем заданное!';
+      lowOrHi.textContent = 'Подсказка: Ваше число меньше, чем заданное!';
         } else if(userGuess > randomNumber) {
-      lowOrHi.textContent = 'Ваше число больше, чем заданное!';
+      lowOrHi.textContent = 'Подсказка: Ваше число больше, чем заданное!';
           }
         }
     }
@@ -72,8 +74,7 @@ function resetGame() {
   resetButton.parentNode.removeChild(resetButton);
 
 Button.disabled = false;
-
- Button.focus();
+Button.focus();
 
   lastResult.style.backgroundColor = 'white';
 

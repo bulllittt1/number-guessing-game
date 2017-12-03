@@ -1,0 +1,19 @@
+html {
+        font-family: Arial, sans-serif;
+      }
+
+body {
+        width: 100%; 
+        text-align: center;
+        max-width: 800px;
+      /*  min-width: 480px; */
+        margin: 0 auto;
+      }
+.lastResult {
+        color: white;
+        padding: 3px;
+      }
+
+low, high {
+    text-transform: uppercase;
+}

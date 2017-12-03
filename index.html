@@ -5,37 +5,18 @@
     
 
     <title>Игра "Угадай число"</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" >
 
-    <style>
-      html {
-        font-family: sans-serif;
-      }
-      body {
-        width: 100%; 
-        max-width: 800px;
-        min-width: 480px;
-        margin: 0 auto;
-      }
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
-        
-    </style>
   </head>
 
   <body>
       <h1>Игра "Угадай число"</h1>
 
-      <p>Дано случайное число от 1 до 100.<br> Попробуйте угадать это число за 10 попыток или меньше;) <br> Мы Вам скажем, если Ваше число будет больше или меньше заданного случайного числа.
+      <p>Дано случайное число от 1 до 100.<br> Попробуйте угадать это число за 10 попыток или меньше ;) <br> Мы Вам скажем, если Ваше число будет больше или меньше заданного случайного числа.
       </p>
 
 <div class="form">
- 
- <!--    <label  for="guessField">Введите ваше число: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Отправить на рассмотрение" class="guessSubmit">
--->
-   <button class="button" onclick="checkGuess()">Нажать, чтобы ввести число.</button>
+   <button class="button">Нажать, чтобы ввести число.</button>
 </div>
 
 <div class="resultParas">
@@ -44,10 +25,7 @@
   <p class="lowOrHi"></p>
 </div>
 
-<script src="script.js">
-    
+<script src="script.js"> </script>
 
-    
-</script>
-</body>
+    </body>
 </html>
