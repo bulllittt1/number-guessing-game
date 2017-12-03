@@ -4,7 +4,6 @@ var guesses = document.querySelector('.guesses');
 var lastResult = document.querySelector('.lastResult');
 var lowOrHi = document.querySelector('.lowOrHi');
 
-//var guessSubmit = document.querySelector('.guessSubmit');
 var Button = document.querySelector('.button');
 Button.focus();
 
@@ -20,6 +19,8 @@ function checkGuess() {
     guesses.textContent = 'Ваши предыдущие числа: ';
   }
   guesses.textContent += userGuess + ' ';
+    
+  
  
   if (userGuess === randomNumber) {
     lastResult.textContent = 'Вы угадали. Круто!';
@@ -32,13 +33,18 @@ function checkGuess() {
   } else {
     lastResult.textContent = 'Неверно!';
     lastResult.style.backgroundColor = 'red';
-    if(userGuess < randomNumber) {
-      lowOrHi.textContent = 'Ваше число меньше заданного!';
-    } else if(userGuess > randomNumber) {
-      lowOrHi.textContent = 'Ваше число больше заданного!';
+    if (userGuess === 0) {
+        lowOrHi.textContent = 'Ноль не входит в промежуток от 1 до 100...';
+    } else if(userGuess > 100) {
+      lowOrHi.textContent = 'Ваше число больше, чем 100... ' ;
+      } else {
+        if(userGuess < randomNumber) {
+      lowOrHi.textContent = 'Ваше число меньше, чем заданное!';
+        } else if(userGuess > randomNumber) {
+      lowOrHi.textContent = 'Ваше число больше, чем заданное!';
+          }
+        }
     }
-  }
- 
   guessCount++;
   Button.focus();
 }
