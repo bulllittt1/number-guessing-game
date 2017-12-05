@@ -6,7 +6,6 @@ body {
         width: 100%; 
         text-align: center;
         max-width: 800px;
-      /*  min-width: 480px; */
         margin: 0 auto;
       }
 .lastResult {
@@ -14,6 +13,11 @@ body {
         padding: 3px;
       }
 
-low, high {
-    text-transform: uppercase;
+body>p {
+    width: 90%;
+    margin: 1em auto;
+}
+
+.resultParas .guesses {
+    text-align: left;
 }
