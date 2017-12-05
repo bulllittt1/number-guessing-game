@@ -13,7 +13,7 @@ body {
         padding: 3px;
       }
 
-body>p {
+ .wid {
     width: 90%;
     margin: 1em auto;
 }
